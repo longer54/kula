@@ -1,0 +1,33 @@
+[package]
+name = "kula"
+description = "Kula: a fast local photo and video browser (Rust + Qt 6 / QML)"
+license = "MIT OR Apache-2.0"
+authors = ["longer54"]
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "kula"
+path = "src/main.rs"
+
+[dependencies]
+cxx = "1"
+cxx-qt = "0.10"
+cxx-qt-lib = { version = "0.10", features = ["qt_full"] }
+rusqlite = { version = "0.40", features = ["bundled", "functions"] }
+serde_json = "1"
+chrono = "0.4"
+walkdir = "2"
+kamadak-exif = "0.6"
+trash = "5"
+libc = "0.2"
+
+[build-dependencies]
+cxx-qt-build = "0.10"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+strip = "debuginfo"

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Kula
+Comment=Browse photos and videos from your disk
+Exec=kula
+Icon=kula
+Categories=Graphics;Photography;Viewer;
+StartupWMClass=kula
+Terminal=false

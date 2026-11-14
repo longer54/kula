@@ -1,0 +1,5 @@
+target/
+*.log
+.qmlls.ini
+*.sqlite*
+*.bak*
